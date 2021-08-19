@@ -24,21 +24,27 @@ module.exports = {
       },
       cep: {
         type: Sequelize.STRING,
+        allowNull: true,
       },
       lougradouro: {
         type: Sequelize.STRING,
+        allowNull: true,
       },
       numero: {
         type: Sequelize.STRING,
+        allowNull: true,
       },
       bairro: {
         type: Sequelize.STRING,
+        allowNull: true,
       },
       cidade: {
         type: Sequelize.STRING,
+        allowNull: true,
       },
       uf: {
         type: Sequelize.STRING,
+        allowNull: true,
       },
       email: {
         type: Sequelize.STRING,
@@ -69,7 +75,9 @@ module.exports = {
         references: {
           model: 'cursos',
           key: 'id',
-        }
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'SET NULL',
       }      
     })
   },
