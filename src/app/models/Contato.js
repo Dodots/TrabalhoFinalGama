@@ -16,6 +16,7 @@ class Contato extends Model {
                 telefone: Sequelize.BIGINT,
                 whatsapp: Sequelize.BIGINT,
                 status: Sequelize.ENUM,
+                cursoId: Sequelize.INTEGER,
             },
             {
                 sequelize,

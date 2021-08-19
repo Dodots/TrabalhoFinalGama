@@ -17,3 +17,5 @@ class Curso extends Model {
         return Curso;
     }
 }
+
+export default Curso;

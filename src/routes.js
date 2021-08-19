@@ -1,12 +1,16 @@
 import { Router } from 'express'
-const routes = new Router();
+import CursoController from './app/controllers/CusoControler'
 
-import UserController from './app/controllers/UserControler'
+const routes = new Router();
 
 routes.get('/', (req, res) => {
     res.json ({ message: "Hellow word" })
 })
 
-routes.post('/users', UserController.store)
+routes.get('/cursos', CursoController.index)
+routes.get('/cursos/:id', CursoController.show)
+routes.post('/cursos', CursoController.store)
+routes.put('/cursos/:id', CursoController.update)
+routes.get('/cursos/:id', CursoController.delete)
 
 export default routes;
