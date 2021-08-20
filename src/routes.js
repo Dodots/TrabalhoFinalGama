@@ -11,6 +11,6 @@ routes.get('/cursos', CursoController.index)
 routes.get('/cursos/:id', CursoController.show)
 routes.post('/cursos', CursoController.store)
 routes.put('/cursos/:id', CursoController.update)
-routes.get('/cursos/:id', CursoController.delete)
+routes.delete('/cursos/:id', CursoController.delete)
 
 export default routes;

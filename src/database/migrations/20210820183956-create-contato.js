@@ -76,8 +76,15 @@ module.exports = {
           model: 'cursos',
           key: 'id',
         },
-        onUpdate: 'CASCADE',
         onDelete: 'SET NULL',
+      },
+      created_at: {
+        type: Sequelize.DATE,
+        allowNull: false,
+      },
+      updated_at: {
+        type: Sequelize.DATE,
+        allowNull: false,
       }      
     })
   },

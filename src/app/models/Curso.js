@@ -5,7 +5,11 @@ class Curso extends Model {
         super.init(
             {
                 nome: Sequelize.STRING,
-                categoria: Sequelize.ENUM
+                categoria: Sequelize.ENUM(
+                    'EDUCACAO_BASICA', 
+                    'GRADUACAO',
+                    'POS_GRADUACAO',
+                    'EDUCACAO_DISTANCIA')
             },
             {
                 sequelize

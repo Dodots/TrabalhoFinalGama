@@ -23,13 +23,13 @@ class CursoController {
 
     async update(req, res){
         let curso = await Curso.findByPk(req.params.id)
-        curso = await Curso.update(req.body);
+        curso = await curso.update(req.body)
         return res.json(curso)
     }
 
     async delete(req, res){
         let curso = await Curso.findByPk(req.params.id)
-        curso = await Curso.destroy(req.body);
+        curso = await curso.destroy(req.body)
         return res.json(curso)
     }
 
