@@ -1,4 +1,4 @@
-import sequelize, { Model } from 'sequelize';
+import Sequelize, { Model } from 'sequelize';
 
 class Contato extends Model {
     static init(sequelize){
@@ -15,14 +15,24 @@ class Contato extends Model {
                 email: Sequelize.STRING,
                 telefone: Sequelize.BIGINT,
                 whatsapp: Sequelize.BIGINT,
-                status: Sequelize.ENUM,
-                cursoId: Sequelize.INTEGER,
+                status: Sequelize.ENUM(
+                    'NOVO', 
+                    'EM_ATENDIMENTO',
+                    'CONTRATADO',
+                    'DESISTENTE') ,
+                cursoId: Sequelize.INTEGER               
             },
             {
                 sequelize,
-            }           
+            }
         );
+        
         return this;
     }
 
+    static associate(models){
+        this.hasMany(models.Curso, {foreignKey: 'cursoId'})
+    }
+
 }
+export default Contato;

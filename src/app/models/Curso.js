@@ -15,10 +15,10 @@ class Curso extends Model {
                 sequelize
             }
         );
-        Curso.associations = function(models){
-            Curso.hasMany(models.Contato)
-        }
-        return Curso;
+        return this;
+    }
+    static associate(models){
+        this.hasMany(models.Contato)
     }
 }
 
