@@ -69,7 +69,7 @@ module.exports = {
           'DESISTENTE'),
         allowNull: false,
       },
-      cursoId: {
+      curso_Id: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
