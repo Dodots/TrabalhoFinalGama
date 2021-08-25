@@ -17,9 +17,6 @@ class Curso extends Model {
         );
         return this;
     }
-    static associate(models){
-        this.hasMany( models.Contato, {foreignKey: 'curso_id', as: 'curso'})
-    }
     
 }
 

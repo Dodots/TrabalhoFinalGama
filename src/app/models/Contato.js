@@ -19,8 +19,7 @@ class Contato extends Model {
                     'NOVO', 
                     'EM_ATENDIMENTO',
                     'CONTRATADO',
-                    'DESISTENTE'),
-                curso_id: Sequelize.INTEGER             
+                    'DESISTENTE')            
             },
             {
                 sequelize,
@@ -30,7 +29,7 @@ class Contato extends Model {
         return this;
     }
     static associate(models){
-        this.belongsTo( models.Curso, {foreignKey: 'id', as: 'curso'})
+        this.belongsTo( models.Curso, {foreignKey: 'curso_Id', as: 'curso'})
     }
 
 }
