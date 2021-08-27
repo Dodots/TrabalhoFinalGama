@@ -29,7 +29,7 @@ class Contato extends Model {
         return this;
     }
     static associate(models){
-        this.belongsTo( models.Curso, {foreignKey: 'curso_Id', as: 'curso'})
+        this.belongsTo( models.Curso, {foreignKey: 'curso_id', as: 'curso'})
     }
 
 }
