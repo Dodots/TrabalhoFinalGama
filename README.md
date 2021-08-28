@@ -3,14 +3,14 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/Dodots/TrabalhoFinalGama) ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/Dodots/TrabalhoFinalGama) ![GitHub followers](https://img.shields.io/github/followers/Dodots)
 
 ## <u>Projeto</u>
-<p>Trabalho final apresentado para conclusão do treinamento do programa de <b>Estágio <i>Tech</i> Cogna/Kroton/Gama</b>.</p>
+<p>Trabalho final apresentado para conclusão do treinamento do programa de <b>Estágio <i>Tech</i> Cogna/Kroton/Gama</b>.
 
 ### <i>Objetivo geral</i>
 <p>Apresentar recursos para manipulação de dados que proporcionem controle de alterações, versionamento e compartilhamento.</p>
 
 ### <i>Objetivos específicos</i>
 * Programar _Javascript_ com ambiente de execução _Node.js_ para desenvolvimento de aplicações; 
-* manipular banco de dados relacional  — CRUD (_Create, Read, Update, Delete_);
+* manipular banco de dados relacionais — CRUD (_Create, Read, Update, Delete_);
 * utilizar de _framework_ ORM (_Object-Relational Mapper_);
 * integrar orientação a objetos com o mapeamento da manipulação de dados;
 
@@ -23,11 +23,16 @@
 - [[x] Insomnia](https://insomnia.rest/)
 - [[x] NPM](https://www.npmjs.com/)
 - [[x] Node.js](https://nodejs.org/en/)
+- [[x] Nodemon.js](https://nodemonjs.com/)
 - [[x] Postbird](https://www.electronjs.org/apps/postbird)
 - [[x] Sequelize](https://www.sequelize.com/)
+- [[x] Sucrase.js](https://www.sucrasejs.com/) 
 - [[x] VsCode](https://code.visualstudio.com/)
 - [[x] Yarn.js](https://www.yarnjs)
 - [[x] Yup](https://www.npmjs.com/package/yup?activeTab=readme)
+- sequelize-cli
+
+## <p>Dependências</p>
 
 
 ## <u>Principais comandos</u>

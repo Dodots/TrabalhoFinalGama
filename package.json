@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.12",
-    "sucrase": "^3.20.1",
-    "sequelize-cli": "^6.2.0"
+    "sequelize-cli": "^6.2.0",
+    "sucrase": "^3.20.1"
   }
 }
