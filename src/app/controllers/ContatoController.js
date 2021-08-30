@@ -23,6 +23,14 @@ class ContatoController{
 
     async store(req, res){
 
+
+        const nome = req.body.nome
+        const email = req.body.email
+        const cpf = req.body.cpf
+        const telefone = req.body.telefone
+        const whatsapp = req.body.whatsapp
+
+
         const contatoSchema = Yup.object().shape({
             nome: Yup.string().required(),
             cpf: Yup.string().required(),
@@ -40,16 +48,17 @@ class ContatoController{
             'CONTRATADO',
             'DESISTENTE']),               
         })
-        
+
+        if( typeof nome !== 'string' || !(isNaN(nome))){
+            return res.status(400).json({ message: 'Nome preenchido incorretamente.'})
+        }
+
+
         if (!(await contatoSchema.isValid(req.body))){
             return res.status(400).json("Falha na Validação")
         }
 
-        const nome = req.body.nome
-        const email = req.body.email
-        const cpf = req.body.cpf
-        const telefone = req.body.telefone
-        const whatsapp = req.body.whatsapp
+
 
         const contatoExiste = await Contato.findOne({ where: { nome }, where: {telefone}, where: {cpf}, where: {email}, where: {whatsapp} });
 
