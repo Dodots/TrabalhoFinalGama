@@ -15,6 +15,10 @@ class CursoController {
 
     async show(req, res){
 
+        if (curso == null){
+            return res.status(400).json("ID inválido")
+        }
+
         let curso = await Curso.findByPk(req.params.id)
 
         return res.status(200).json(curso)
@@ -53,6 +57,10 @@ class CursoController {
 
     async update(req, res){
         let curso = await Curso.findByPk(req.params.id)
+
+        if (curso == null){
+            return res.status(400).json("ID inválido")
+        }
 
         const nome = req.body.nome
 

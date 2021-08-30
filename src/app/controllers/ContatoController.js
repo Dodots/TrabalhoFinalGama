@@ -15,8 +15,9 @@ class ContatoController{
 
         let contato = await Contato.findByPk(req.params.id)
 
-        
-
+        if (contato == null){
+            return res.status(400).json("ID inválido")
+        }
         
         return res.json(contato)
     }
@@ -72,6 +73,10 @@ class ContatoController{
 
     async update(req, res){
         let contato = await Contato.findByPk(req.params.id)
+
+        if (contato == null){
+            return res.status(400).json("ID inválido")
+        }
 
         const contatoSchema = Yup.object().shape({
             nome: Yup.string().required(),
