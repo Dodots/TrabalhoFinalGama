@@ -1,4 +1,4 @@
-import Curso from "../models/Curso"
+import Curso from "../models/Curso";
 
 class CursoController {
 
@@ -6,31 +6,67 @@ class CursoController {
         const curso = await Curso.findAll();
 
         if (curso == null){
-            return res.json ({ message: "Está vazio" })
+            return res.json ({ message: "Nenhum curso disponível" })
         }
-        return res.json(curso)
+
+        return res.status(200).json(curso)
     }
 
     async show(req, res){
+
         let curso = await Curso.findByPk(req.params.id)
-        return res.json(curso)
+
+        return res.status(200).json(curso)
     }
 
     async store(req, res){
+        
+        const nome = req.body.nome
+        const categoria = req.body.categoria
+
+        if (!nome || !categoria){
+            return res.status(400).json({ message: 'Todos os campos precisam ser preenchido.'})
+        } else if( typeof nome !== 'string'){
+            return res.status(400).json({ message: 'Nome preenchido incorretamente.'})
+        } else if (typeof categoria !== 'string'){
+            return res.status(400).json({ message: 'Categoria preenchido incorretamente.'})
+        }
+
+        const cursoExiste = await Curso.findOne({ where: { nome }});
+        
+         if (cursoExiste){
+            return res.status(400).json({message: 'Este curso já existe.'})
+        }
+
         const curso = await Curso.create(req.body);
-        return res.json(curso)
+        return res.status(200).json(curso)
     }
 
     async update(req, res){
         let curso = await Curso.findByPk(req.params.id)
+
+        const nome = req.body.nome
+        const categoria = req.body.categoria
+
+        if (!nome || !categoria){
+            return res.status(400).json({ message: 'Todos os campos precisam ser preenchido.'})
+        } else if( typeof nome !== 'string'){
+            return res.status(400).json({ message: 'Nome preenchido incorretamente.'})
+        } else if (typeof categoria !== 'string'){
+            return res.status(400).json({ message: 'Categoria preenchido incorretamente.'})
+        }
+
         curso = await curso.update(req.body)
-        return res.json(curso)
+
+
+        return res.status(200).json(curso)
     }
 
     async delete(req, res){
         let curso = await Curso.findByPk(req.params.id)
+
         curso = await curso.destroy(req.body)
-        return res.json(curso)
+        return res.status(200).json({message: 'Curso deletado com sucesso'})
     }
 
 
