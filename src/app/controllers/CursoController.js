@@ -1,4 +1,5 @@
 import Curso from "../models/Curso";
+import * as Yup from 'yup';
 
 class CursoController {
 
@@ -24,12 +25,21 @@ class CursoController {
         const nome = req.body.nome
         const categoria = req.body.categoria
 
-        if (!nome || !categoria){
-            return res.status(400).json({ message: 'Todos os campos precisam ser preenchido.'})
-        } else if( typeof nome !== 'string'){
+        const cursoSchema = Yup.object().shape({
+            nome: Yup.string().required(),
+            categoria: Yup.mixed().oneOf([
+            'EDUCACAO_BASICA', 
+            'GRADUACAO',
+            'POS_GRADUACAO',
+            'EDUCACAO_DISTANCIA']),
+        })
+
+        if( typeof nome !== 'string'){
             return res.status(400).json({ message: 'Nome preenchido incorretamente.'})
-        } else if (typeof categoria !== 'string'){
-            return res.status(400).json({ message: 'Categoria preenchido incorretamente.'})
+        }
+
+        if (!(await cursoSchema.isValid(req.body))){
+            return res.status(400).json("Falha na Validação")
         }
 
         const cursoExiste = await Curso.findOne({ where: { nome }});
