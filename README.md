@@ -1,49 +1,53 @@
 # GERAÇÕES UNIDAS
 
-![GitHub language count](https://img.shields.io/github/languages/count/Dodots/TrabalhoFinalGama) ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/Dodots/TrabalhoFinalGama) ![GitHub followers](https://img.shields.io/github/followers/Dodots)
+![GitHub language count](https://img.shields.io/github/languages/count/Dodots/TrabalhoFinalGama) ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/Dodots/TrabalhoFinalGama) ![GitHub followers](https://img.shields.io/github/followers/Dodots) ![Github licence](https://img.shields.io/badge/license-ISC-orange)
 
 ## <u>Projeto</u>
+
 <p>Trabalho final apresentado para conclusão do treinamento do programa de <b>Estágio <i>Tech</i> Cogna/Kroton/Gama</b>.
 
 ### <i>Objetivo geral</i>
+
 <p>Apresentar recursos para manipulação de dados que proporcionem controle de alterações, versionamento e compartilhamento.</p>
 
 ### <i>Objetivos específicos</i>
-* Programar _Javascript_ com ambiente de execução _Node.js_ para desenvolvimento de aplicações; 
-* manipular banco de dados relacionais — CRUD (_Create, Read, Update, Delete_);
-* utilizar de _framework_ ORM (_Object-Relational Mapper_);
-* integrar orientação a objetos com o mapeamento da manipulação de dados;
 
+- Programar _Javascript_ com ambiente de execução _Node.js_ para desenvolvimento de aplicações;
+- manipular banco de dados relacionais — CRUD (_Create, Read, Update, Delete_);
+- utilizar de _framework_ ORM (_Object-Relational Mapper_);
+- integrar orientação a objetos com o mapeamento da manipulação de dados;
 
 ## <u>Recursos</u>
 
 - [[x] GitHub](https://github.com/)
 - [[x] ElephantSQL](https://www.elephantsql.com/)
-- [[x] Express](https://expressjs.com/)
 - [[x] Insomnia](https://insomnia.rest/)
 - [[x] NPM](https://www.npmjs.com/)
 - [[x] Node.js](https://nodejs.org/en/)
-- [[x] Nodemon.js](https://nodemonjs.com/)
 - [[x] Postbird](https://www.electronjs.org/apps/postbird)
-- [[x] Sequelize](https://www.sequelize.com/)
-- [[x] Sucrase.js](https://www.sucrasejs.com/) 
 - [[x] VsCode](https://code.visualstudio.com/)
 - [[x] Yarn.js](https://www.yarnjs)
+
+## <u>Dependências</u>
+
+- [[x] Express](https://expressjs.com/)
+- [[x] Nodemon.js](https://nodemonjs.com/)
+- [[x] PG](https://www.npmjs.com/package/pg)
+- [[x] PG-hstore](https://www.npmjs.com/package/pg-hstore/v/2.3.4)
+- [[x] Sequelize](https://www.sequelize.com/)
+- [[x] Sequelize-cli](https://www.npmjs.com/package/sequelize-cli)
+- [[x] Sucrase.js](https://www.sucrasejs.com/)
 - [[x] Yup](https://www.npmjs.com/package/yup?activeTab=readme)
-- sequelize-cli
-
-## <p>Dependências</p>
-
 
 ## <u>Principais comandos</u>
 
-|Comando                                            | Propósito                                          |
-|:--------------------------------------------------| :--------------------------------------------------|
-|npm i ou yarn                                      | Instalação de pacotes                              |
-|npm run dev ou yarn dev                            | Iniciar o projeto em ambiente de desenvolvimento   |
-|yarn sequelize db:migrate                          | Iniciar _migration_                                |
-|yarn sequelize db:migrate:db:undo                  | Remover _migration_                                |
-|yarn sequelize db:migrate:db:undo:all              | Remover todas as _migrations_                      |
+| Comando                               | Propósito                                        |
+| :------------------------------------ | :----------------------------------------------- |
+| npm i ou yarn                         | Instalação de pacotes                            |
+| npm run dev ou yarn dev               | Iniciar o projeto em ambiente de desenvolvimento |
+| yarn sequelize db:migrate             | Iniciar _migration_                              |
+| yarn sequelize db:migrate:db:undo     | Remover _migration_                              |
+| yarn sequelize db:migrate:db:undo:all | Remover todas as _migrations_                    |
 
 ## <u>Deploy com Heroku ou Netlify ou Amazon?</u>
 
