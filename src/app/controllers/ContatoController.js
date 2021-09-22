@@ -95,7 +95,7 @@ class ContatoController{
             'CONTRATADO',
             'DESISTENTE']),               
         })
-        
+
         if (!(await contatoSchema.isValid(req.body))){
             return res.status(400).json("Falha na Validação")
         }

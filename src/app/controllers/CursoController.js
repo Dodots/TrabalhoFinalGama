@@ -15,11 +15,13 @@ class CursoController {
 
     async show(req, res){
 
+        let curso = await Curso.findByPk(req.params.id)
+
         if (curso == null){
-            return res.status(400).json("ID inválido")
+            return res.status(404).json("Curso não encontrado")
         }
 
-        let curso = await Curso.findByPk(req.params.id)
+        
 
         return res.status(200).json(curso)
     }
@@ -38,17 +40,17 @@ class CursoController {
         })
 
         if( typeof nome !== 'string' || !(isNaN(nome))){
-            return res.status(400).json({ message: 'Nome preenchido incorretamente.'})
+            return res.status(405).json({ message: 'Nome preenchido incorretamente.'})
         }
 
         if (!(await cursoSchema.isValid(req.body))){
-            return res.status(400).json("Falha na Validação")
+            return res.status(405).json("Falha na Validação")
         }
 
         const cursoExiste = await Curso.findOne({ where: { nome }});
         
          if (cursoExiste){
-            return res.status(400).json({message: 'Este curso já existe.'})
+            return res.status(405).json({message: 'Este curso já existe.'})
         }
 
         const curso = await Curso.create(req.body);
@@ -74,11 +76,11 @@ class CursoController {
         })
 
         if( typeof nome !== 'string' || !(isNaN(nome))){
-            return res.status(400).json({ message: 'Nome preenchido incorretamente.'})
+            return res.status(404).json({ message: 'Nome preenchido incorretamente.'})
         }
 
         if (!(await cursoSchema.isValid(req.body))){
-            return res.status(400).json("Falha na Validação")
+            return res.status(404).json("Falha na Validação")
         }
 
         curso = await curso.update(req.body)
