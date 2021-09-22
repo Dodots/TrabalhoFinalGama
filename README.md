@@ -16,6 +16,8 @@
 - manipular banco de dados relacionais — CRUD (_Create, Read, Update, Delete_);
 - utilizar de _framework_ ORM (_Object-Relational Mapper_);
 - integrar orientação a objetos com o mapeamento da manipulação de dados;
+- gerir as alterações incrementais por meio de _schema_;
+- gerar documentação automática da API por meio do _framework_ _swagger_;
 
 ## <u>Recursos</u>
 
@@ -30,13 +32,21 @@
 
 ## <u>Dependências</u>
 
+- [[x] Bcrypt](https://www.npmjs.com/package/bcrypt)
+- [[x] Crypto](https://www.npmjs.com/package/crypto-js)
+- [[x] Date-fns](https://date-fns.org/)
+- [[x] Dotenv](https://www.npmjs.com/package/dotenv)
 - [[x] Express](https://expressjs.com/)
+- [[x] Jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
+- [[x] Mongoose](https://mongoosejs.com/)
+- [[x] Multer](https://www.npmjs.com/package/multer)
 - [[x] Nodemon.js](https://nodemonjs.com/)
 - [[x] PG](https://www.npmjs.com/package/pg)
 - [[x] PG-hstore](https://www.npmjs.com/package/pg-hstore/v/2.3.4)
 - [[x] Sequelize](https://www.sequelize.com/)
 - [[x] Sequelize-cli](https://www.npmjs.com/package/sequelize-cli)
 - [[x] Sucrase.js](https://www.sucrasejs.com/)
+- [[x] Swagger-ui-express](https://www.npmjs.com/package/swagger-ui-express)
 - [[x] Yup](https://www.npmjs.com/package/yup?activeTab=readme)
 
 ## <u>Principais comandos</u>
