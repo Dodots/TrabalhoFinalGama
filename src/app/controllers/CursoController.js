@@ -34,9 +34,9 @@ class CursoController {
             nome: Yup.string().required(),
             categoria: Yup.mixed().oneOf([
             'EDUCACAO_BASICA', 
+            'EDUCACAO_DISTANCIA', 
             'GRADUACAO',
-            'POS_GRADUACAO',
-            'EDUCACAO_DISTANCIA']),
+            'POS_GRADUACAO']),
         })
 
         if( typeof nome !== 'string' || !(isNaN(nome))){
@@ -54,7 +54,7 @@ class CursoController {
         }
 
         const curso = await Curso.create(req.body);
-        return res.status(200).json(curso)
+        return res.status(201).json(curso)
     }
 
     async update(req, res){

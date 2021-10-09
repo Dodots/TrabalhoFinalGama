@@ -68,7 +68,7 @@ class ContatoController{
         }
 
         const contato = await Contato.create(req.body);
-        return res.status(200).json(contato)
+        return res.status(201).json(contato)
     }
 
     async update(req, res){
@@ -108,7 +108,7 @@ class ContatoController{
         let contato = await Contato.findByPk(req.params.id)
         
         contato = await contato.destroy(req.body)
-        return res.status(200).json({message: 'Curso deletado com sucesso'})
+        return res.status(201).json({message: 'Curso deletado com sucesso'})
     }
 
 }
