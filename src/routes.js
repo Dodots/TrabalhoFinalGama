@@ -16,10 +16,10 @@ routes.get('/', (req, res) => {
 })
 
 routes.get('/cursos', CursoController.index)
-routes.get('/curso/:id', CursoController.show)
+routes.get('/cursos/:id', CursoController.show)
 routes.post('/cursos', CursoController.store)
-routes.put('/curso/:id', CursoController.update)
-routes.delete('/curso/:id', CursoController.delete)
+routes.put('/cursos/:id', CursoController.update)
+routes.delete('/cursos/:id', CursoController.delete)
 
 routes.get('/contatos', ContatoController.index)
 routes.get('/contatos/:id', ContatoController.show)

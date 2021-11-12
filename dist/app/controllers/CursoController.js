@@ -1,10 +1,10 @@
-import Curso from "../models/Curso";
-import * as Yup from 'yup';
+"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { newObj[key] = obj[key]; } } } newObj.default = obj; return newObj; } } function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }var _Curso = require('../models/Curso'); var _Curso2 = _interopRequireDefault(_Curso);
+var _yup = require('yup'); var Yup = _interopRequireWildcard(_yup);
 
 class CursoController {
 
     async index(req, res){
-        const curso = await Curso.findAll();
+        const curso = await _Curso2.default.findAll();
 
         if (curso == null){
             return res.json ({ message: "Nenhum curso disponível" })
@@ -15,7 +15,7 @@ class CursoController {
 
     async show(req, res){
 
-        let curso = await Curso.findByPk(req.params.id)
+        let curso = await _Curso2.default.findByPk(req.params.id)
 
         if (curso == null){
             return res.status(404).json("Curso não encontrado")
@@ -47,18 +47,18 @@ class CursoController {
             return res.status(405).json("Falha na Validação")
         }
 
-        const cursoExiste = await Curso.findOne({ where: { nome }});
+        const cursoExiste = await _Curso2.default.findOne({ where: { nome }});
         
          if (cursoExiste){
             return res.status(405).json({message: 'Este curso já existe.'})
         }
 
-        const curso = await Curso.create(req.body);
+        const curso = await _Curso2.default.create(req.body);
         return res.status(201).json(curso)
     }
 
     async update(req, res){
-        let curso = await Curso.findByPk(req.params.id)
+        let curso = await _Curso2.default.findByPk(req.params.id)
 
         if (curso == null){
             return res.status(400).json("ID inválido")
@@ -90,7 +90,7 @@ class CursoController {
     }
 
     async delete(req, res){
-        let curso = await Curso.findByPk(req.params.id)
+        let curso = await _Curso2.default.findByPk(req.params.id)
 
         if (curso == null){
             return res.status(404).json("Curso não encontrado")
@@ -109,4 +109,4 @@ class CursoController {
 
 }
 
-export default new CursoController();
+exports. default = new CursoController();
