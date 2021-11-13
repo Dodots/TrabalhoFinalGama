@@ -1,6 +1,6 @@
 # GERAÇÕES UNIDAS
 
-![GitHub language count](https://img.shields.io/github/languages/count/Dodots/TrabalhoFinalGama) ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/Dodots/TrabalhoFinalGama) ![GitHub followers](https://img.shields.io/github/followers/Dodots) ![Github licence](https://img.shields.io/badge/license-ISC-orange)
+![GitHub language count](https://img.shields.io/github/languages/count/Dodots/TrabalhoFinalGama) ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/Dodots/TrabalhoFinalGama) ![GitHub followers](https://img.shields.io/github/followers/Dodots) ![Github licence](https://img.shields.io/badge/license-ISC-orange) <a href="https://project-gama-academy.herokuapp.com/swagger/">![Heroku](https://heroku-badge.herokuapp.com/?app=heroku-badge)</a>
 
 ## <u>Projeto</u>
 
@@ -59,9 +59,16 @@
 | yarn sequelize db:migrate:db:undo     | Remover _migration_                              |
 | yarn sequelize db:migrate:db:undo:all | Remover todas as _migrations_                    |
 
-## <u>Deploy com Heroku ou Netlify ou Amazon?</u>
+## <u>Deploy com Heroku</u>
 
-_comming soon_
+https://project-gama-academy.herokuapp.com/swagger/
+
+<img src="img\swagger_heroku.gif">
+
+## <u>Features</u>
+
+- [x] Cadastro de contato (aluno matriculado)
+- [x] Cadastro de curso
 
 ## <u>Team</u>
 
