@@ -1,9 +1,9 @@
-import Contato from "../models/Contato";
-import * as Yup from 'yup';
+"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { newObj[key] = obj[key]; } } } newObj.default = obj; return newObj; } } function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }var _Contato = require('../models/Contato'); var _Contato2 = _interopRequireDefault(_Contato);
+var _yup = require('yup'); var Yup = _interopRequireWildcard(_yup);
 
 class ContatoController{
     async index(req, res){
-        const contato = await Contato.findAll();
+        const contato = await _Contato2.default.findAll();
 
         if (contato == null){
             return res.json ({ message: "Está vazio" })
@@ -13,7 +13,7 @@ class ContatoController{
 
     async show(req, res){
 
-        let contato = await Contato.findByPk(req.params.id)
+        let contato = await _Contato2.default.findByPk(req.params.id)
 
         if (contato == null){
             return res.status(400).json("ID inválido")
@@ -61,18 +61,18 @@ class ContatoController{
 
 
 
-        const contatoExiste = await Contato.findOne({ where: { nome }, where: {telefone}, where: {cpf}, where: {email}, where: {whatsapp} });
+        const contatoExiste = await _Contato2.default.findOne({ where: { nome }, where: {telefone}, where: {cpf}, where: {email}, where: {whatsapp} });
 
         if (contatoExiste){
             return res.status(400).json('Contato Já existe')
         }
 
-        const contato = await Contato.create(req.body);
+        const contato = await _Contato2.default.create(req.body);
         return res.status(201).json(contato)
     }
 
     async update(req, res){
-        let contato = await Contato.findByPk(req.params.id)
+        let contato = await _Contato2.default.findByPk(req.params.id)
 
         if (contato == null){
             return res.status(400).json("ID inválido")
@@ -105,7 +105,7 @@ class ContatoController{
     }
 
     async delete(req, res){
-        let contato = await Contato.findByPk(req.params.id)
+        let contato = await _Contato2.default.findByPk(req.params.id)
         
         contato = await contato.destroy(req.body)
         return res.status(201).json({message: 'Curso deletado com sucesso'})
@@ -113,4 +113,4 @@ class ContatoController{
 
 }
 
-export default new ContatoController();
+exports. default = new ContatoController();
