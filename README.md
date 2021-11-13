@@ -75,10 +75,10 @@ https://project-gama-academy.herokuapp.com/swagger/
 <table>
 <thead>
 <tr>
-<th style="text-align: center;><a href=""><img src="img\davidson_cardoso.png" width="115" style="max-width:100%;"><br><img src="https://img.shields.io/badge/Davidson%20Cardoso-blue?style=flat&logo=linkedin"></a></th>
-<th style="text-align: center;><a href=""><img src="img\douglas_fiorentino.png" width="115" style="max-width:100%;"><br><img src="https://img.shields.io/badge/Douglas%20Fiorentino-blue?style=flat&logo=linkedin"></a></th>
-<th style="text-align: center;><a href=""><img src="img\gabriel_miranda.png" width="115" style="max-width:100%;"><br><img src="https://img.shields.io/badge/Gabriel%20Miranda-blue?style=flat&logo=linkedin"></a></th>
-<th style="text-align: center;><a href=""><img src="img\matheus_assumpcao.png" width="115" style="max-width:100%;"><br><img src="https://img.shields.io/badge/Matheus%20Assump%C3%A7%C3%A3o-blue?style=flat&logo=linkedin"></a></th>
-<th style="text-align: center;><a href="https://linkedin.com/in/tanivia"><img src="img\tanivia_timbo.png" width="115" style="max-width:100%;"><br><img src="https://img.shields.io/badge/Tan%C3%ADvia%20Timb%C3%B3-blue?style=flat&logo=linkedin"></a></th>
+<th style="text-align: center;><a href=""><img src="img\davidson_cardoso.png" ><br><img src="https://img.shields.io/badge/Davidson%20Cardoso-blue?style=flat&logo=linkedin"></a></th>
+<th style="text-align: center;><a href=""><img src="img\douglas_fiorentino.png" ><br><img src="https://img.shields.io/badge/Douglas%20Fiorentino-blue?style=flat&logo=linkedin"></a></th>
+<th style="text-align: center;><a href=""><img src="img\gabriel_miranda.png" ><br><img src="https://img.shields.io/badge/Gabriel%20Miranda-blue?style=flat&logo=linkedin"></a></th>
+<th style="text-align: center;><a href=""><img src="img\matheus_assumpcao.png" ><br><img src="https://img.shields.io/badge/Matheus%20Assump%C3%A7%C3%A3o-blue?style=flat&logo=linkedin"></a></th>
+<th style="text-align: center;><a href="https://linkedin.com/in/tanivia"><img src="img\tanivia_timbo.png"><br><img src="https://img.shields.io/badge/Tan%C3%ADvia%20Timb%C3%B3-blue?style=flat&logo=linkedin"></a></th>
 </thead>
 </table>
