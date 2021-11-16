@@ -53,6 +53,8 @@ class CursoController {
             return res.status(405).json({message: 'Este curso já existe.'})
         }
 
+        
+
         const curso = await Curso.create(req.body);
         return res.status(201).json(curso)
     }
@@ -66,24 +68,10 @@ class CursoController {
 
         const nome = req.body.nome
 
-        const cursoSchema = Yup.object().shape({
-            nome: Yup.string().required(),
-            categoria: Yup.mixed().oneOf([
-            'EDUCACAO_BASICA', 
-            'GRADUACAO',
-            'POS_GRADUACAO',
-            'EDUCACAO_DISTANCIA']),
-        })
-
-        if( typeof nome !== 'string' || !(isNaN(nome))){
-            return res.status(404).json({ message: 'Nome preenchido incorretamente.'})
-        }
-
-        if (!(await cursoSchema.isValid(req.body))){
-            return res.status(404).json("Falha na Validação")
-        }
 
         curso = await curso.update(req.body)
+
+        
 
 
         return res.status(200).json(curso)
@@ -100,7 +88,7 @@ class CursoController {
             await curso.destroy(curso)
         }
         catch(err){
-            return res.status(401).json("Curso está vinculado com um contato ")
+            return res.status(404).json("Curso está vinculado com um contato ")
         }
         
         return res.status(200).json("Curso deletado com sucesso")

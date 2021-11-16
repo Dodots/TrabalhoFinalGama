@@ -8,6 +8,9 @@ class ContatoController{
         if (contato == null){
             return res.json ({ message: "Está vazio" })
         }
+
+        contato.categoria.value
+
         return res.json(contato)
     }
 
@@ -75,29 +78,7 @@ class ContatoController{
         let contato = await Contato.findByPk(req.params.id)
 
         if (contato == null){
-            return res.status(400).json("ID inválido")
-        }
-
-        const contatoSchema = Yup.object().shape({
-            nome: Yup.string().required(),
-            cpf: Yup.string().required(),
-            cep: Yup.string(),
-            lougradouro: Yup.string(),
-            numero: Yup.string(),
-            bairro: Yup.string(),
-            cidade: Yup.string(),
-            uf: Yup.string(),
-            email: Yup.string().email().required(),
-            telefone: Yup.number().required(),
-            whatsapp: Yup.number().required(),
-            status: Yup.mixed().oneOf(['NOVO', 
-            'EM_ATENDIMENTO',
-            'CONTRATADO',
-            'DESISTENTE']),               
-        })
-
-        if (!(await contatoSchema.isValid(req.body))){
-            return res.status(400).json("Falha na Validação")
+            return res.status(405).json("ID inválido")
         }
 
         contato = await contato.update(req.body)
