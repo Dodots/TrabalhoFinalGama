@@ -9,8 +9,6 @@ class ContatoController{
             return res.json ({ message: "Está vazio" })
         }
 
-        contato.categoria.value
-
         return res.json(contato)
     }
 
