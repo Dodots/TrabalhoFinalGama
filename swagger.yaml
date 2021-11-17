@@ -6,7 +6,7 @@ info:
   termsOfService: ""
   contact:
     email: "d.morais@kroton.com"
-host: 127.0.0.1:33333  
+host: project-gama-academy.herokuapp.com  
 tags:
 - name: "curso"
   description: "Cursos para todos os gostos."
